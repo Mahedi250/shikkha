@@ -1,0 +1,20 @@
+{
+    "InfixBiometrics": false,
+    "FeesCollection": false,
+    "ResultReports": false,
+    "TemplateSettings": true,
+    "RolePermission": true,
+    "RazorPay": false,
+    "Saas": false,
+    "Lesson": true,
+    "Zoom": true,
+    "ParentRegistration": true,
+    "SaasSubscription": false,
+    "Inventory": false,
+    "SaasRolePermission": false,
+    "MenuManage": true,
+    "OnlineExam": false,
+    "BBB": false,
+    "Jitsi": false,
+    "Chat": true
+}

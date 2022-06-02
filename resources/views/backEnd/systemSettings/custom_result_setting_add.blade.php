@@ -1,0 +1,184 @@
+@extends('backEnd.master')
+@section('title')
+@lang('lang.result') @lang('lang.settings')
+@endsection
+
+@section('mainContent')
+<section class="sms-breadcrumb mb-40 white-box">
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <h1>@lang('lang.setup') @lang('lang.exam') @lang('lang.rule')</h1>
+            <div class="bc-pages">
+                <a href="{{route('dashboard')}}">@lang('lang.dashboard')</a>
+                <a href="#">@lang('lang.examination')</a>
+                <a href="#">@lang('lang.settings')</a>
+                <a href="#">@lang('lang.setup') @lang('lang.exam') @lang('lang.rule')</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="admin-visitor-area up_st_admin_visitor">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="main-title">
+                            <h3 class="mb-30">
+                                @lang('lang.setup') @lang('lang.final') @lang('lang.exam') @lang('lang.rule')
+                            </h3>
+                        </div>
+                        @if($edit_data >= 1)
+                            {{ Form::open(['class' => 'form-horizontal', 'files' => true, 'route' => array('custom-result-setting/update'), 'method' => 'PUT', 'enctype' => 'multipart/form-data']) }}
+                        @else
+                            @if(userPermission(437))
+                                {{ Form::open(['class' => 'form-horizontal', 'files' => true, 'route' => 'custom-result-setting/store','method' => 'POST', 'enctype' => 'multipart/form-data']) }}
+                            @endif
+                        @endif
+                        <div class="white-box">
+                            <div class="add-visitor">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        @if(session()->has('message-success'))
+                                        <div class="alert alert-success">
+                                            {{ session()->get('message-success') }}
+                                        </div>
+                                        @elseif(session()->has('message-danger'))
+                                        <div class="alert alert-danger">
+                                            {{ session()->get('message-danger') }}
+                                        </div>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="row mb-40 ">
+                                @php
+                                    $average=0;
+                                @endphp
+                                @foreach($exams as $exam)
+                                        <div class="col-lg-12 mt-15">
+                                            <div class="row">
+                                                <div class="col-lg-7 d-flex">
+                                                    <p class="text-uppercase fw-300 mb-10">
+                                                        @lang('lang.exam_type') {{$exam->title}} (%)
+                                                        <input type="hidden" value="{{$exam->id}}" name="exam_type_id[]">
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-5">
+                                                    <div class="radio-btn-flex ml-20">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="input-effect sm2_mb_20 md_mb_20">
+                                                                    <input type="text" data-id="{{$exam->id}}"  name="exam_type_percent[{{$exam->id}}]" value="{{ isset($exam->id) == @$exam->examTerm->exam_type_id? $exam->examTerm->exam_percentage: $average }}" class="primary-input form-controll read-only-input has-content maxPercent">
+                                                                    <span class="focus-border"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                @endforeach
+                                <div class="col-lg-12 mt-15 border-top">
+                                    <div class="row">
+                                        <div class="col-lg-7 d-flex">
+                                            <strong>
+                                                <p class="text-uppercase fw-300 mb-10">
+                                                    @lang('lang.total_mark') 100%
+                                                </p>
+                                            </strong>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <div class="radio-btn-flex ml-20">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="input-effect sm2_mb_20 md_mb_20">
+                                                            <strong>
+                                                                <p id="mark-calculate"></p>
+                                                            </strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                                    @php 
+                                        $tooltip = "";
+                                        if(userPermission(437)){
+                                                $tooltip = "";
+                                            }else{
+                                                $tooltip = "You have no permission to update";
+                                            }
+                                    @endphp
+                                    <div class="col-lg-12 text-center">
+                                        <button type="submit" class="primary-btn fix-gr-bg submit result_setup" data-toggle="tooltip" title="{{@$tooltip}}">
+                                            <span class="ti-check"></span>@lang('lang.update')
+                                        </button>
+                                    </div>
+                                </div>
+                        </div>
+                        {{ Form::close() }}
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="main-title">
+                    <h3 class="mb-30">
+                        @lang('lang.mark') @lang('lang.contribution')
+                    </h3>
+                </div>
+                <div class="white-box">
+                    <table class="display school-table" cellspacing="0" width="100%">
+                        <thead>
+                            @if(session()->has('message-success-delete') != "" ||
+                            session()->get('message-danger-delete') != "")
+                            <tr>
+                                <td colspan="6">
+                                    @if(session()->has('message-success-delete'))
+                                    <div class="alert alert-success">
+                                        {{ session()->get('message-success-delete') }}
+                                    </div>
+                                    @elseif(session()->has('message-danger-delete'))
+                                    <div class="alert alert-danger">
+                                        {{ session()->get('message-danger-delete') }}
+                                    </div>
+                                    @endif
+                                </td>
+                            </tr>
+                            @endif
+                            <tr class="border-bottom">
+                                <th>@lang('lang.exam') @lang('lang.term')</th>
+                                <th class="text-right">@lang('lang.percentage')</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @php
+                                $total_percentage = 0;
+                            @endphp
+                            @foreach($custom_settings as $custom_setting)
+                            <tr>
+                                <td>{{@$custom_setting->examTypeName->title}}</td>
+                                <td class="text-right">{{@$custom_setting->exam_percentage}}%</td>
+                                @php
+                                    $total_percentage+=@$custom_setting->exam_percentage;
+                                @endphp
+                            </tr>
+                            @endforeach
+                        </tbody>
+                        <tfoot>
+                            <tr class="border-top">
+                                <th>@lang('lang.total')</th>
+                                <th class="text-right">{{$total_percentage}}%</th>
+                            </tr>
+                        </tfoot>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endsection

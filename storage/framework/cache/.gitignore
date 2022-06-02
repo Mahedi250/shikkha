@@ -1,0 +1,18 @@
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/storage/log/laravel
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+<<<<<<< HEAD
+*.log
+=======
+*.log
+>>>>>>> b55ca922d76c3a61dc678d32bdf5193a1961848a

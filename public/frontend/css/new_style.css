@@ -1,0 +1,143 @@
+.top-banner-area {
+    padding: 100px 0;
+}
+.top-banner-content .intro {
+    color: #3e3e3e;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
+    margin: 0 0 11px;
+}
+.top-banner-content .title {
+    border-bottom: 1px solid #323232;
+    color: #474747;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 40px;
+    margin: 0 0 43px;
+    padding: 0 0 17px;
+}
+.top-banner-content .text {
+    color: #161616;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 38px;
+}
+.top-banner-img {
+    display: inline-block;
+    padding: 20px 26px;
+    position: relative;
+    z-index: 3;
+}
+.top-banner-img::before {
+    position: absolute;
+}
+
+.testimonial-image{
+    width: 60px !important;
+    height: 60px;
+}
+.news-image{
+    height: 340px;
+}
+
+.single-faclities {
+    background: #323232 none repeat scroll 0 0;
+    cursor: pointer;
+    margin: 0 0 30px;
+    padding: 27px 0 26px;
+    text-align: center;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.single-faclities .icon {
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 90px;
+    margin: auto;
+    text-align: center;
+    width: 90px;
+}
+
+.single-faclities .name {
+    color: #ffffff;
+    font-weight: 600;
+    margin: 11px 0 0;
+}
+
+.single-faclities .icon img {
+    -ms-flex-item-align: center;
+    align-self: center;
+    margin: auto;
+    max-width: 56px;
+    text-align: center;
+    width: auto;
+}
+
+.apply-now-area {
+    padding: 100px 0;
+}
+.apply-now {
+    background: #323232 none repeat scroll 0 0;
+    padding: 50px 20px 50px 86px;
+}
+.apply-now .title {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 40px;
+}
+.apply-now .link {
+    background: #ffffff none repeat scroll 0 0;
+    color: #323232 !important;
+    padding: 10px 14px;
+}
+.glbscl-link-btn {
+    background: #282828 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 3px;
+    color: #ffffff !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 24px;
+    padding: 7px 7px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.client.light .header-area .navbar .nav .nav-item .nav-link {
+    color:white !important;
+}
+.news-image {
+    height: auto;
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+@media (min-width:768px){
+    .top-banner-area {
+        padding: 100px 0;
+         margin-top: 10%; 
+    }
+    .news-image {
+        height: auto;
+        width: 100%;
+    }
+        .client.light .header-area .navbar .nav .nav-item .nav-link, .client.color .header-area .navbar .nav .nav-item .nav-link {
+            color: white !important;
+        }
+}
+@media (max-width:768px){
+    
+        .client.light .header-area .navbar .nav .nav-item .nav-link, .client.color .header-area .navbar .nav .nav-item .nav-link {
+            color: white !important;
+        }
+}

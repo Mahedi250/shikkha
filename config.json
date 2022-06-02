@@ -1,0 +1,9 @@
+{
+  "version": "6.1.1",
+  "release_date": "05/05/2021",
+  "migrations": [
+    "database/migrations/2021_04_29_103755_create_edu_update_version_table.php"
+  ],
+  "url": "https://spondonit.com/contact",
+  "notes": "This is a bug fixing update."
+}

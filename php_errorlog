@@ -1,0 +1,33 @@
+[22-Jan-2022 14:44:07 UTC] PHP Fatal error:  Cannot use Illuminate\Support\Facades\Route as Route because the name is already in use in /home/customer/www/cadetcareacademy.com/public_html/routes/web.php on line 13
+[22-Jan-2022 14:44:13 UTC] PHP Fatal error:  Cannot use Illuminate\Support\Facades\Route as Route because the name is already in use in /home/customer/www/cadetcareacademy.com/public_html/routes/web.php on line 13
+[22-Jan-2022 14:44:14 UTC] PHP Fatal error:  Cannot use Illuminate\Support\Facades\Route as Route because the name is already in use in /home/customer/www/cadetcareacademy.com/public_html/routes/web.php on line 13
+[22-Jan-2022 14:44:17 UTC] PHP Fatal error:  Cannot use Illuminate\Support\Facades\Route as Route because the name is already in use in /home/customer/www/cadetcareacademy.com/public_html/routes/web.php on line 13
+[22-Jan-2022 14:44:22 UTC] PHP Fatal error:  Cannot use Illuminate\Support\Facades\Route as Route because the name is already in use in /home/customer/www/cadetcareacademy.com/public_html/routes/web.php on line 13
+[22-Jan-2022 15:08:07 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit2ea8f487f8ff0b47365fdb80417f8ebb' not found in /home/customer/www/cadetcareacademy.com/public_html/vendor/composer/autoload_static.php:8768
+Stack trace:
+#0 /home/customer/www/cadetcareacademy.com/public_html/vendor/composer/autoload_real.php(35): Composer\Autoload\ClassLoader::Composer\Autoload\{closure}()
+#1 /home/customer/www/cadetcareacademy.com/public_html/vendor/autoload.php(7): ComposerAutoloaderInitfe2364e25282715940a4d4d826626598::getLoader()
+#2 /home/customer/www/cadetcareacademy.com/public_html/index.php(24): require('/home/customer/...')
+#3 {main}
+  thrown in /home/customer/www/cadetcareacademy.com/public_html/vendor/composer/autoload_static.php on line 8768
+[22-Jan-2022 15:08:08 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit2ea8f487f8ff0b47365fdb80417f8ebb' not found in /home/customer/www/cadetcareacademy.com/public_html/vendor/composer/autoload_static.php:8768
+Stack trace:
+#0 /home/customer/www/cadetcareacademy.com/public_html/vendor/composer/autoload_real.php(35): Composer\Autoload\ClassLoader::Composer\Autoload\{closure}()
+#1 /home/customer/www/cadetcareacademy.com/public_html/vendor/autoload.php(7): ComposerAutoloaderInitfe2364e25282715940a4d4d826626598::getLoader()
+#2 /home/customer/www/cadetcareacademy.com/public_html/index.php(24): require('/home/customer/...')
+#3 {main}
+  thrown in /home/customer/www/cadetcareacademy.com/public_html/vendor/composer/autoload_static.php on line 8768
+[22-Jan-2022 15:08:45 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit2ea8f487f8ff0b47365fdb80417f8ebb' not found in /home/customer/www/cadetcareacademy.com/public_html/vendor/composer/autoload_static.php:8768
+Stack trace:
+#0 /home/customer/www/cadetcareacademy.com/public_html/vendor/composer/autoload_real.php(35): Composer\Autoload\ClassLoader::Composer\Autoload\{closure}()
+#1 /home/customer/www/cadetcareacademy.com/public_html/vendor/autoload.php(7): ComposerAutoloaderInitfe2364e25282715940a4d4d826626598::getLoader()
+#2 /home/customer/www/cadetcareacademy.com/public_html/index.php(24): require('/home/customer/...')
+#3 {main}
+  thrown in /home/customer/www/cadetcareacademy.com/public_html/vendor/composer/autoload_static.php on line 8768
+[22-Jan-2022 15:08:50 UTC] PHP Fatal error:  Uncaught Error: Class 'Composer\Autoload\ComposerStaticInit2ea8f487f8ff0b47365fdb80417f8ebb' not found in /home/customer/www/cadetcareacademy.com/public_html/vendor/composer/autoload_static.php:8768
+Stack trace:
+#0 /home/customer/www/cadetcareacademy.com/public_html/vendor/composer/autoload_real.php(35): Composer\Autoload\ClassLoader::Composer\Autoload\{closure}()
+#1 /home/customer/www/cadetcareacademy.com/public_html/vendor/autoload.php(7): ComposerAutoloaderInitfe2364e25282715940a4d4d826626598::getLoader()
+#2 /home/customer/www/cadetcareacademy.com/public_html/index.php(24): require('/home/customer/...')
+#3 {main}
+  thrown in /home/customer/www/cadetcareacademy.com/public_html/vendor/composer/autoload_static.php on line 8768
